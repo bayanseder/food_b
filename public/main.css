@@ -1,0 +1,105 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css);
+body{
+padding: 0;
+margin: 0;
+text-align: center;
+display: flex;
+flex-direction: column;
+}
+.header_section{
+    background-color: whitesmoke;
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.header_section__style{
+    font-size: 56px;
+    font-family: 'Love Ya Like A Sister', cursive;
+    text-shadow: 4px 4px 2px rgb(51, 122, 44);
+}
+.nav_style{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(190, 247, 117, 0.918);
+    font-size: 18px ;
+    font-family: 'Love Ya Like A Sister', cursive;
+    height: 40px;
+    margin-bottom: 40px;
+
+}
+.nav_form__input{
+    width: 100px;
+    height: 24px;
+    border: 2px solid  rgba(28, 179, 1, 0.897);
+    border-radius: 10px;
+}
+.nav_form__button{
+    border: 1.5px solid rgba(7, 179, 1, 0.897);
+    background-color: whitesmoke;
+    border-radius: 7px;
+    height: 28px;
+}
+.random_recipe{
+    font-size: 20px;
+    text-shadow: 2px 2px 2px rgb(51, 122, 44);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.random_recipe__img{
+    margin-top: 30px;
+    width: 150px;
+    height: 150px;
+    border:solid 2px rgb(51, 122, 44);
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px grey;
+
+}
+.random_recipe__dev{
+    background-color:  rgba(216, 251, 169, 0.918) ;
+    font-family: 'Love Ya Like A Sister', cursive;
+}
+
+
+.end_icon{
+    display: flex;
+    justify-content: space-evenly;
+    background-color:  rgba(216, 251, 169, 0.918) ;
+    text-shadow: 2px 2px 2px rgb(51, 122, 44);
+}
+
+.ingredients_div{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 20px;
+
+}
+.instructions_div{
+    padding-top: 5px;
+    background-color:  rgba(216, 251, 169, 0.918) ; 
+    font-size: 20px;
+
+}
+.Instructions_text{
+    width: 320px;
+    padding : 0px 0 30px 30px ;
+
+}
+.cursor{
+    cursor: pointer;
+}
+.categories_div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 30px 10px 30px ;
+}
+.categories_div__img{
+    width : 180px;
+    height: 180px;
+    border-radius: 50%;
+}
