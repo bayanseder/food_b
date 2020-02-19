@@ -96,13 +96,10 @@ flex-direction: column;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 800px;
-}
-.meals_div{
-
+    margin: 10px 30px 10px 30px ;
 }
 .categories_div__img{
-    width : 150px;
-    height: 150px;
+    width : 180px;
+    height: 180px;
     border-radius: 50%;
 }
