@@ -17,6 +17,7 @@ app.get('/',(req ,res)=>{
 });
 app.get('/food',food);
 
+
 app.use(express.static(path.join(__dirname,'..','public'),{maxAge : '30d'}));
 
 app.get('/categories',(req ,res)=>{
@@ -37,6 +38,21 @@ app.get('/categories/:categoryName',(req,res)=>{
             res.send(body)}
     })
 })
+
+app.get('/api/meals/:mealName',(req , res)=>{
+   request(foodApi+`search.php?s=${req.params.mealName}`,(err,response,body)=>{
+    if(err){
+            return res.status(500).send(err);
+        }
+        if(body!== null){
+            res.send(body)} 
+    })
+})
+
+app.get('/meals/:mealName',(req , res)=>{
+    res.sendFile(path.join(__dirname,'..','public','meals.html'));
+})
+
 
 app.use(errors.notFound);
 app.use(errors.serverErr);

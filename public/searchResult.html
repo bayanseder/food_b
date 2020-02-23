@@ -3,45 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cooking page</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Shojumaru&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
 </head>
 <body>
-    <section>
-        <h1 class="header_style">COOK AND EAT</h1>
+    <section class="header_section">
+        <h1 class="header_section__style">COOK AND EAT</h1>
         <nav class="nav_style">
-            <a>HOME</a>
+            <a class="cursor">HOME</a>
+            <a class="cursor" href="/categories.html">Categories</a>
             <form>
                 <label>Search</label>
-                <input class="nav_form__input" type="text" >
-                <button class="nav_form__button">Search</button>
+                <input name="meal" id="mealSearch" class="nav_form__input" type="text" >
+                <input id="searchButton" class="nav_form__button cursor" type="submit" value="Search">
             </form>
         </nav>
     </section>
-    <section>
-        <div id="resultName">
-            <img src="" alt="">
-            <h2></h2>
-        </div>
-        <div class="ingredients_div">
-            <h4>Ingredients</h4><br>
-            
-        </div>
-        <div class="instructions_div">
-            <h4>Instructions</h4><br>
-            <p class="Instructions_text"></p>
-        </div>
-    </section>
+    <section id="searchResult" class="categories_div">
 
+       
+    </section>
     <footer class="end_icon">
         <i class="fas fa-hamburger fa-2x"></i>
         <i class="fas fa-carrot fa-2x"></i>
         <i class="fas fa-hotdog fa-2x"></i>
         <i class="fas fa-fish fa-2x"></i>
         <i class="fas fa-pepper-hot fa-2x"></i>
-    </footer>
-    <script src="dom.js"></script>
+    </footer><br>
+    <script src="js/api.js"></script>
+    <script src="js/search.js"></script>
 </body>
 </html>
