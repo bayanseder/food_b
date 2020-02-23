@@ -1,19 +1,4 @@
-const xhr = new XMLHttpRequest();
-let apiCall = (method, url, callback) => {
-    xhr.onreadystatechange = () => {
-        if (xhr.status === 200 && xhr.readyState === 4) {
-            const response = JSON.parse(xhr.responseText);
-            if(typeof callback==='function'){
-            
-                callback(response);
-            }
-        }else {
-            console.log('Error:',xhr.status,'|',xhr.readyState,)
-        }
-    }
-    xhr.open(method, url)
-    xhr.send();
-}
+
 
 function createCateg(item) {
     
@@ -30,6 +15,7 @@ function createCateg(item) {
     categImg.src= item.strCategoryThumb;
     categName.innerHTML=item.strCategory;
     categImg.className = "categories_div__img"
+    categDiv.className = "categories_div__item"
     return categDiv;
 }
  function getCategories() {
@@ -44,11 +30,16 @@ function createCateg(item) {
     }
 function createMeals(item){
     let mealDiv = document.createElement("div");
+    let link =document.createElement("a");
     let mealImg = document.createElement("img");
     let mealName =document.createElement("h3");
-    mealDiv.appendChild(mealImg)
+    link.setAttribute('href',`/meals/${item.strMeal}`);
+    
+    link.appendChild(mealImg)
+    mealDiv.appendChild(link)
     mealDiv.appendChild(mealName);
     mealImg.className = "categories_div__img";
+    mealDiv.className = "categories_div__item"
     mealImg.src= item.strMealThumb;
     mealName.innerHTML=item.strMeal;
     return mealDiv;
@@ -61,6 +52,7 @@ function getMealsCateg(e) {
         res.meals.forEach(meals=>{
             let mealscont=document.getElementById("mealsContener")
             mealscont.appendChild(createMeals(meals))
+            mealscont.className = "categories_div"
         })
     })
 }
