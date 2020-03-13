@@ -14,16 +14,21 @@
         <nav class="nav_style">
             <a class="cursor">HOME</a>
             <a class="cursor" href="/categories.html">Categories</a>
-            <form>
-                <label>Search</label>
-                <input name="meal" id="mealSearch" class="nav_form__input" type="text" >
-                <input id="searchButton" class="nav_form__button cursor" type="submit" value="Search">
+            <form action="/search" method="POST">
+                <label hidden>Search</label>
+                <input name="meal" id="mealSearch" class="nav_form__input" type="text" placeholder="SEARCH">
+                <button id="searchButton" class="nav_form__button cursor" type="submit">Search</button>
             </form>
         </nav>
     </section>
     <section id="randomCon" class="categories_div">
        
     </section>
+    <hr class="line">
+    <section id="searchResult">
+
+    </section>
+
     <footer class="end_icon">
         <i class="fas fa-hamburger fa-2x"></i>
         <i class="fas fa-carrot fa-2x"></i>
@@ -33,5 +38,6 @@
     </footer><br>
     <script src="js/api.js"></script>
     <script src="js/dom.js"></script>
+    <!-- <script src="js/search.js"></script> -->
 </body>
 </html>

@@ -2,18 +2,6 @@ const request = require("request");
 const fetch = require("node-fetch");
 
 
-const getFood =  (req, res) => {
-  request(foodApi+`search.php?s=${req.params.mealName}`,(err,response,body)=>{
-    if(err){
-            return res.status(500).send(err);
-        }
-        if(body!== null){
-            res.send(body)} 
-    })
-
-};
-
-
 const randomurl ='https://www.themealdb.com/api/json/v1/1/random.php'
 
 function getRandom() {
@@ -32,4 +20,4 @@ function getRandom() {
     });
   }
 
-module.exports ={ getFood ,getRandom};
+module.exports ={getRandom};
