@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 });
 const randomurl = "https://www.themealdb.com/api/json/v1/1/random.php";
-app.get('/food',food.getFood);
+
 
 app.use(
   express.static(path.join(__dirname, "..", "public"), { maxAge: "30d" })
@@ -92,6 +92,20 @@ app.get("/meals/:mealName", (req, res) => {
         console.log(err);
       });
   });
+
+  app.post('/search',(req,res)=>{
+    mealSearch=req.body.meal
+    request(foodApi + `search.php?s=${mealSearch}`,
+    (err, response, body) => {
+      if (err) {
+        return res.status(500).send(err);
+      }
+      if (body !== null) {
+        res.send(body);
+      }
+    })
+  })
+
 
 app.use(errors.notFound);
 app.use(errors.serverErr);
