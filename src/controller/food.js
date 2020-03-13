@@ -11,14 +11,6 @@ const getFood =  (req, res) => {
             res.send(body)} 
     })
 
-//    getRequestData(() => {
-
-//     console.log("finnni");
-//   console.log(arr);
-//   res.send(arr);
-//   });
-
-  
 };
 
 

@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 });
 const randomurl = "https://www.themealdb.com/api/json/v1/1/random.php";
-//app.get('/food',food);
+app.get('/food',food.getFood);
 
 app.use(
   express.static(path.join(__dirname, "..", "public"), { maxAge: "30d" })
@@ -85,7 +85,7 @@ app.get("/meals/:mealName", (req, res) => {
         food.getRandom();
       })
       .then(result => {
-        console.log(data);
+        res.send(data);
       })
   
       .catch(err => {
