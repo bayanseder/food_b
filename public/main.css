@@ -41,24 +41,6 @@ flex-direction: column;
     border-radius: 7px;
     height: 28px;
 }
-.random_recipe{
-    font-size: 20px;
-    text-shadow: 2px 2px 2px rgb(51, 122, 44);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    
-}
-.random_recipe__img{
-    margin-top: 30px;
-    width: 150px;
-    height: 150px;
-    border:solid 2px rgb(51, 122, 44);
-    border-radius: 7px;
-    cursor: pointer;
-    box-shadow: 5px 5px 5px grey;
-
-}
 .random_recipe__dev{
     background-color:  rgba(216, 251, 169, 0.918) ;
     font-family: 'Love Ya Like A Sister', cursive;
