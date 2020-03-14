@@ -1,4 +1,5 @@
 
+
 window.addEventListener('load',(event)=>{
 
     apiCall('GET','/api/random',(res)=>{  
@@ -24,3 +25,30 @@ window.addEventListener('load',(event)=>{
     
 })
 
+const searchBtn = document.getElementById("searchButton")
+searchBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    const mealSearch=document.getElementById("mealSearch").value;
+    console.log('meal',mealSearch)
+    apiCall('GET',`https://www.themealdb.com/api/json/v1/1/search.php?s=${mealSearch}`,(res)=>{
+       res.meals.forEach(meals => {
+           
+           let searchResultSection = document.getElementById("searchResult")
+           let searchResultDiv=document.createElement("div");
+           let searchResultImg=document.createElement("img");
+           let searchResultName=document.createElement("h3");
+           let searchResultLink=document.createElement("a");
+           searchResultLink.appendChild(searchResultImg);
+           searchResultDiv.appendChild(searchResultLink);
+           searchResultDiv.appendChild(searchResultName);
+           searchResultLink.setAttribute('href',`/meals/${meals.strMeal}`);
+           searchResultImg.src=meals.strMealThumb;
+           searchResultName.innerHTML=meals.strMeal;
+           searchResultImg.className="categories_div__img";
+           searchResultDiv.className="categories_div__item";
+           searchResultSection.appendChild(searchResultDiv);
+           searchResultSection.className="categories_div";
+        });
+    })
+
+})
