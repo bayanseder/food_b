@@ -15,7 +15,6 @@ flex-direction: column;
 }
 .header_section__style{
     font-size: 56px;
-    font-family: 'Love Ya Like A Sister', cursive;
     text-shadow: 4px 4px 2px rgb(51, 122, 44);
 }
 .nav_style{
@@ -24,7 +23,6 @@ flex-direction: column;
     align-items: center;
     background-color: rgba(216, 251, 169, 0.918);
     font-size: 18px ;
-    font-family: 'Love Ya Like A Sister', cursive;
     height: 40px;
     margin-bottom: 40px;
 
@@ -43,7 +41,6 @@ flex-direction: column;
 }
 .random_recipe__dev{
     background-color:  rgba(216, 251, 169, 0.918) ;
-    font-family: 'Love Ya Like A Sister', cursive;
 }
 
 
@@ -109,4 +106,16 @@ flex-direction: column;
     width: 70vw;
     height: 60vh;
     box-shadow: 5px 5px 5px gray;
+}
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
+@media (min-width: 320px) and (max-width: 600px){
+    .header_section__style{
+        font-size: 30px;
+    }
+    .nav_style{
+        font-size: 14px;
+    }
 }
